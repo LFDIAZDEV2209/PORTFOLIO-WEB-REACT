@@ -12,15 +12,17 @@ const Navbar = () => {
     >
       <div
         className="flex items-center gap-2 justify-center 
-            px-4 py-1 dark:bg-white/10 bg-slate-800/10 background-blur-sm rounded-full"
+            px-4 py-1 dark:bg-white/10 bg-slate-800/10 backdrop-blur-sm rounded-full"
       >
         {itemsNavbar.map((item) => (
-          <div
+          <Link
             key={item.title}
-            className="cursor-pointer hover:dark:bg-slate-800 hover:dark-bg-slate-400 rounded-full p-2"
+            href={item.link}
+            className="cursor-pointer p-2 rounded-full transition-colors hover:bg-[var(--color-primary)] hover:text-[var(--color-primary-foreground)]"
           >
-            <Link href={item.link}>{item.icon}</Link>
-          </div>
+            {item.icon}
+            <span className="sr-only">{item.title}</span>
+          </Link>
         ))}
         <ModeToggle />
       </div>
