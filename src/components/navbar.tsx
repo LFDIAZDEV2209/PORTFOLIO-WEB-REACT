@@ -12,7 +12,7 @@ const Navbar = () => {
     >
       <div
         className="flex items-center gap-2 justify-center 
-            px-4 py-1 dark:bg-white/10 bg-slate-800/10 backdrop-blur-sm rounded-full"
+            px-4 py-1 dark:bg-slate-800 bg-slate-200 rounded-full"
       >
         {itemsNavbar.map((item) => (
           <Link

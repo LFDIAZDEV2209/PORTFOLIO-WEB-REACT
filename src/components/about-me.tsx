@@ -20,7 +20,7 @@ const AboutMe = () => {
   }, [api]);
 
   return (
-    <div className="p-6 md:px-12 md:py-30 max-w-5xl mx-auto" id="about-me">
+    <div className="p-6 md:px-12 md:py-15 max-w-5xl mx-auto" id="about-me">
       <Title title="About Me" subtitle="Get to know me" />
 
       <div className="grid md:grid-cols-2">
@@ -68,25 +68,14 @@ const AboutMe = () => {
             ))}
           </div>
           <p className="my-8">
-            ¡Hola! Soy un desarrollador web apasionado y orientado a los
-            detalles, con experiencia en JavaScript, React, Node.js y Python.
-            Disfruto transformar problemas complejos en soluciones limpias,
-            elegantes y funcionales. En los últimos años he trabajado en
-            diversos proyectos, desde aplicaciones web dinámicas hasta APIs
-            backend. Siempre estoy en busca de nuevas tecnologías, formas de
-            mejorar mis habilidades y contribuir a productos que generen un
-            impacto real. Me interesa especialmente escribir código limpio,
-            seguir buenas prácticas de UI/UX y construir experiencias digitales
-            intuitivas. Cuando no estoy programando, probablemente esté
-            explorando nuevas herramientas, colaborando en proyectos open source
-            o aprendiendo sobre inteligencia artificial y desarrollo full stack.
-            ¡Estoy listo para crear algo increíble contigo!
+            Hi, I'm a passionate web developer focused on details, with experience in JavaScript, React, Node.js and Python. I enjoy transforming complex problems into clean, elegant and functional solutions. In recent years, I have worked on various projects, from dynamic web applications to backend APIs. I am always looking for new technologies, ways to improve my skills and contribute to products that generate real impact. I am particularly interested in writing clean code, following good UI/UX practices and building intuitive digital experiences. When I'm not coding, I'm probably exploring new tools, collaborating on open source projects or learning about artificial intelligence and full stack development. I'm ready to create something amazing with you!
           </p>
-
-          <Button >
+          <div className="flex justify-center mt-4">
+          <Button>
             <Phone size={20} className="mr-2" />
             Call me
-          </Button>
+            </Button>
+          </div>
         </div>
       </div>
     </div>

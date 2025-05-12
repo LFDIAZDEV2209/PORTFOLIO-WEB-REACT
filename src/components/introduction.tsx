@@ -23,7 +23,15 @@ const Introduction = () => {
             </div>
         </div>
 
-        <Image className="rounded-full mt-10 ml-auto" src="/Profile_Photo.jpg" alt="Profile pic" width={400} height={400} />
+        <div className="flex justify-center mt-10">
+            <Image 
+                className="rounded-full" 
+                src="/Profile_Photo.jpg" 
+                alt="Profile pic" 
+                width={400} 
+                height={400} 
+            />
+        </div>
       </div>
     </Container>
   );

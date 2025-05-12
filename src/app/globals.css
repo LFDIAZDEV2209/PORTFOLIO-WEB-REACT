@@ -8,11 +8,13 @@ html,body{
   color: var(--foreground);
   display: flex;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   scroll-behavior: smooth;
+  overflow-y: auto;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
-
-
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);

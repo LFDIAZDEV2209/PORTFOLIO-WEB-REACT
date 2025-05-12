@@ -1,23 +1,49 @@
-import { BellPlus, BookText, Briefcase, Brush, Code2, CodeSquare, Home, Inbox, Mail, PanelsTopLeft, Phone, UserRound, UsersRound, Wrench } from "lucide-react";
+import { BellPlus, BookText, Briefcase, Brush, Code2, CodeSquare, Home, Inbox, Mail, PanelsTopLeft, Phone, UserRound, UsersRound, Wrench, 
+  FileCode, 
+  FileJson, 
+  FileText, 
+  FileType, 
+  FileCode2, 
+  FileCog,
+  Database,
+  Server,
+  Terminal,
+  FileSpreadsheet,
+  FileCodeIcon
+} from "lucide-react";
+import { 
+  SiHtml5, 
+  SiCss3, 
+  SiJavascript, 
+  SiTailwindcss, 
+  SiReact, 
+  SiBootstrap,
+  SiNodedotjs,
+  SiMongodb,
+  SiPython,
+  SiMysql,
+  SiPhp,
+  SiDjango
+} from "react-icons/si";
 
 export const dataAboutMe = [
     {
         id: 1,
         name: "Experiencia",
         icon: <Briefcase />,
-        description: "1 año de experiencia",
+        description: " 1 year of experience",
     },
     {
         id: 2,
         name: "Social",
         icon: <UsersRound />,
-        description: "Amigable y con ganas de aprender",
+        description: "Friendly and eager to learn",
     },
     {
         id: 3,
         name: "Proyectos",
         icon: <Wrench />,
-        description: "+50 proyectos completados",
+        description: "50+ projects completed",
     },
 ];
 
@@ -118,6 +144,20 @@ export const dataPortfolio = [
     },
 ];
 
+export const technologyIcons = {
+  "HTML": <SiHtml5 className="w-6 h-6 text-orange-500" />,
+  "CSS": <SiCss3 className="w-6 h-6 text-blue-500" />,
+  "JavaScript": <SiJavascript className="w-6 h-6 text-yellow-400" />,
+  "Tailwind CSS": <SiTailwindcss className="w-6 h-6 text-cyan-500" />,
+  "React": <SiReact className="w-6 h-6 text-blue-400" />,
+  "Bootstrap": <SiBootstrap className="w-6 h-6 text-purple-500" />,
+  "Node JS": <SiNodedotjs className="w-6 h-6 text-green-500" />,
+  "Mongo DB": <SiMongodb className="w-6 h-6 text-green-600" />,
+  "Python": <SiPython className="w-6 h-6 text-blue-600" />,
+  "MySQL": <SiMysql className="w-6 h-6 text-blue-700" />,
+  "PHP": <SiPhp className="w-6 h-6 text-purple-600" />,
+  "Django": <SiDjango className="w-6 h-6 text-green-700" />
+};
 
 export const dataExperience = [
     {
@@ -125,34 +165,22 @@ export const dataExperience = [
         title: "Frontend Development  💄",
         experience: [
             {
-                name: "HTML",
-                subtitle: "Experimentado",
-                value: 80,
+                icon: technologyIcons["HTML"]
             },
             {
-                name: "CSS",
-                subtitle: "Intermedio",
-                value: 75,
+                icon: technologyIcons["CSS"]
             },
             {
-                name: "JavaScript",
-                subtitle: "Experimentado",
-                value: 60,
+                icon: technologyIcons["JavaScript"]
             },
             {
-                name: "Tailwind CSS",
-                subtitle: "Experimentado",
-                value: 30,
+                icon: technologyIcons["Tailwind CSS"],
             },
             {
-                name: "React",
-                subtitle: "Experimentado",
-                value: 60,
+                icon: technologyIcons["React"],
             },
             {
-                name: "Bootstrap",
-                subtitle: "Basic",
-                value: 50,
+                icon: technologyIcons["Bootstrap"],
             },
         ],
     },
@@ -161,39 +189,26 @@ export const dataExperience = [
         title: "Backend Development  🥷",
         experience: [
             {
-                name: "Node JS",
-                subtitle: "Experimentado",
-                value: 80,
+                icon: technologyIcons["Node JS"]
             },
             {
-                name: "Mongo DB",
-                subtitle: "Intermedio",
-                value: 75,
+                icon: technologyIcons["Mongo DB"],
             },
             {
-                name: "Python",
-                subtitle: "Basic",
-                value: 60,
+                icon: technologyIcons["Python"]
             },
             {
-                name: "MySQL",
-                subtitle: "Experimentado",
-                value: 60,
+                icon: technologyIcons["MySQL"]
             },
             {
-                name: "PHP",
-                subtitle: "Experimentado",
-                value: 60,
+                icon: technologyIcons["PHP"]
             },
             {
-                name: "Django",
-                subtitle: "Basic",
-                value: 60,
+                icon: technologyIcons["Django"]
             },
         ],
     },
 ];
-
 
 export const dataServices = [
     {
@@ -281,7 +296,6 @@ export const dataServices = [
         ],
     },
 ];
-
 
 export const dataContact = [
     {

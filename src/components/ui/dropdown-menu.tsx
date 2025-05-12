@@ -60,7 +60,7 @@ function DropdownMenuGroup({
 }
 
 function DropdownMenuItem({
-  className,
+  className="cursor-pointer",
   inset,
   variant = "default",
   ...props

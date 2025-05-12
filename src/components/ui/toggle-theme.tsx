@@ -21,7 +21,7 @@ export function ModeToggle() {
 
   if (!mounted) {
     return (
-      <Button variant="outline" size="icon" disabled>
+      <Button size="icon" disabled>
         <Sun className="h-[1.2rem] w-[1.2rem]" />
       </Button>
     )
@@ -30,7 +30,7 @@ export function ModeToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon">
+        <Button size="icon">
           {resolvedTheme === "dark" ? (
             <Moon className="h-[1.2rem] w-[1.2rem]" />
           ) : (

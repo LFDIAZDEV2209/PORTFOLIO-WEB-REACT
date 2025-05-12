@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${urbanist.className} antialiased`}>
+      <body className={`${urbanist.className} antialiased`} >
         <ThemeProvider>
           {children}
         </ThemeProvider>
