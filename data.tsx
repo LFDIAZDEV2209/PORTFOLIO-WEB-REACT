@@ -1,15 +1,4 @@
-import { BellPlus, BookText, Briefcase, Brush, Code2, CodeSquare, Home, Inbox, Mail, PanelsTopLeft, Phone, UserRound, UsersRound, Wrench, 
-  FileCode, 
-  FileJson, 
-  FileText, 
-  FileType, 
-  FileCode2, 
-  FileCog,
-  Database,
-  Server,
-  Terminal,
-  FileSpreadsheet,
-  FileCodeIcon
+import { BellPlus, BookText, Briefcase, Brush, Code2, CodeSquare, Home, Inbox, Mail, PanelsTopLeft, Phone, UserRound, UsersRound, Wrench,
 } from "lucide-react";
 import { 
   SiHtml5, 
@@ -17,14 +6,14 @@ import {
   SiJavascript, 
   SiTailwindcss, 
   SiReact, 
-  SiBootstrap,
+  SiTypescript,
   SiNodedotjs,
   SiMongodb,
   SiPython,
   SiMysql,
-  SiPhp,
   SiDjango
 } from "react-icons/si";
+import { CSharpIcon } from "@/components/icons/CSharpIcon";
 
 export const dataAboutMe = [
     {
@@ -145,24 +134,24 @@ export const dataPortfolio = [
 ];
 
 export const technologyIcons = {
-  "HTML": <SiHtml5 className="w-6 h-6 text-orange-500" />,
-  "CSS": <SiCss3 className="w-6 h-6 text-blue-500" />,
-  "JavaScript": <SiJavascript className="w-6 h-6 text-yellow-400" />,
-  "Tailwind CSS": <SiTailwindcss className="w-6 h-6 text-cyan-500" />,
-  "React": <SiReact className="w-6 h-6 text-blue-400" />,
-  "Bootstrap": <SiBootstrap className="w-6 h-6 text-purple-500" />,
-  "Node JS": <SiNodedotjs className="w-6 h-6 text-green-500" />,
-  "Mongo DB": <SiMongodb className="w-6 h-6 text-green-600" />,
-  "Python": <SiPython className="w-6 h-6 text-blue-600" />,
-  "MySQL": <SiMysql className="w-6 h-6 text-blue-700" />,
-  "PHP": <SiPhp className="w-6 h-6 text-purple-600" />,
-  "Django": <SiDjango className="w-6 h-6 text-green-700" />
+  "HTML": <SiHtml5 className="w-8 h-8 text-orange-500" />,
+  "CSS": <SiCss3 className="w-8 h-8 text-blue-500" />,
+  "JavaScript": <SiJavascript className="w-8 h-8 text-yellow-400" />,
+  "Tailwind CSS": <SiTailwindcss className="w-8 h-8 text-cyan-500" />,
+  "React": <SiReact className="w-8 h-8 text-blue-400" />,
+  "TypeScript": <SiTypescript className="w-8 h-8 text-blue-600" />,
+  "Node JS": <SiNodedotjs className="w-8 h-8 text-green-500" />,
+  "Mongo DB": <SiMongodb className="w-8 h-8 text-green-600" />,
+  "Python": <SiPython className="w-8 h-8 text-blue-600" />,
+  "MySQL": <SiMysql className="w-9 h-9 text-blue-700" />,
+  "C#": <CSharpIcon className="w-9 h-9 text-purple-600" />,
+  "Django": <SiDjango className="w-8 h-8 text-green-700" />
 };
 
 export const dataExperience = [
     {
         id: 1,
-        title: "Frontend Development  💄",
+        title: "Frontend Development 💄",
         experience: [
             {
                 icon: technologyIcons["HTML"]
@@ -180,7 +169,7 @@ export const dataExperience = [
                 icon: technologyIcons["React"],
             },
             {
-                icon: technologyIcons["Bootstrap"],
+                icon: technologyIcons["TypeScript"],
             },
         ],
     },
@@ -201,7 +190,7 @@ export const dataExperience = [
                 icon: technologyIcons["MySQL"]
             },
             {
-                icon: technologyIcons["PHP"]
+                icon: technologyIcons["C#"]
             },
             {
                 icon: technologyIcons["Django"]
