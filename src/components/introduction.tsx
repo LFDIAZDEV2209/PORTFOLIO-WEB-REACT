@@ -1,11 +1,12 @@
-import Link from "next/link";
 import { buttonVariants } from "./ui/button";
-import { Mail, Paperclip } from "lucide-react";
+import Container from "./shared/container";
 import Image from "next/image";
+import Link from "next/link";
+import { Mail, Paperclip } from "lucide-react";
 
 const Introduction = () => {
   return (
-    <div>
+    <Container>
       <div className="text-center" id="home">
         <h3 className="text-xl mb-3">Hello, I'm</h3>
         <h1 className="text-4xl font-bold mb-3">Luis Felipe Diaz 🧑🏻‍💻</h1>
@@ -22,9 +23,9 @@ const Introduction = () => {
             </div>
         </div>
 
-        <Image className="rounded-full mt-10" src="/Profile_Photo.jpg" alt="Profile pic" width={400} height={400} />
+        <Image className="rounded-full mt-10 ml-auto" src="/Profile_Photo.jpg" alt="Profile pic" width={400} height={400} />
       </div>
-    </div>
+    </Container>
   );
 };
 

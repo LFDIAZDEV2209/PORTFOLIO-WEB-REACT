@@ -5,19 +5,19 @@ export const dataAboutMe = [
         id: 1,
         name: "Experiencia",
         icon: <Briefcase />,
-        description: "+4 años de experiencia",
+        description: "1 año de experiencia",
     },
     {
         id: 2,
-        name: "Clientes",
+        name: "Social",
         icon: <UsersRound />,
-        description: "+200 clientes satisfechos",
+        description: "Amigable y con ganas de aprender",
     },
     {
         id: 3,
         name: "Proyectos",
         icon: <Wrench />,
-        description: "+50 completados",
+        description: "+50 proyectos completados",
     },
 ];
 
@@ -57,19 +57,19 @@ export const itemsNavbar = [
 export const dataSlider = [
     {
         id: 1,
-        url: "/slider-1.jpg",
+        url: "/cumple.jpg",
     },
     {
         id: 2,
-        url: "/slider-2.jpg",
+        url: "/family-2.jpg",
     },
     {
         id: 3,
-        url: "/slider-3.jpg",
+        url: "/giuliana.jpg",
     },
     {
         id: 4,
-        url: "/slider-4.jpg",
+        url: "/my-love.jpg",
     },
 ]
 
