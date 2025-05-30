@@ -7,13 +7,16 @@
   0% {
     transform: translateY(0) rotate(215deg);
     opacity: 1;
+    z-index: 0;
   }
   70% {
     opacity: 1;
+    z-index: 0;
   }
   100% {
     transform: translateY(100vh) rotate(215deg);
     opacity: 0;
+    z-index: 0;
   }
 }
 

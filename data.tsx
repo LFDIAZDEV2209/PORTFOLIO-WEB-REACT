@@ -134,18 +134,18 @@ export const dataPortfolio = [
 ];
 
 export const technologyIcons = {
-  "HTML": <SiHtml5 className="w-8 h-8 text-orange-500" />,
-  "CSS": <SiCss3 className="w-8 h-8 text-blue-500" />,
-  "JavaScript": <SiJavascript className="w-8 h-8 text-yellow-400" />,
-  "Tailwind CSS": <SiTailwindcss className="w-8 h-8 text-cyan-500" />,
-  "React": <SiReact className="w-8 h-8 text-blue-400" />,
-  "TypeScript": <SiTypescript className="w-8 h-8 text-blue-600" />,
-  "Node JS": <SiNodedotjs className="w-8 h-8 text-green-500" />,
-  "Mongo DB": <SiMongodb className="w-8 h-8 text-green-600" />,
-  "Python": <SiPython className="w-8 h-8 text-blue-600" />,
-  "MySQL": <SiMysql className="w-9 h-9 text-blue-700" />,
-  "C#": <CSharpIcon className="w-9 h-9 text-purple-600" />,
-  "Django": <SiDjango className="w-8 h-8 text-green-700" />
+  "HTML": <SiHtml5 className="w-8 h-8 text-orange-500 transform transition-all duration-300 hover:scale-110" />,
+  "CSS": <SiCss3 className="w-8 h-8 text-blue-500 transform transition-all duration-300 hover:scale-110" />,
+  "JavaScript": <SiJavascript className="w-8 h-8 text-yellow-400 transform transition-all duration-300 hover:scale-110" />,
+  "Tailwind CSS": <SiTailwindcss className="w-8 h-8 text-cyan-500 transform transition-all duration-300 hover:scale-110" />,
+  "React": <SiReact className="w-8 h-8 text-blue-400 transform transition-all duration-300 hover:scale-110" />,
+  "TypeScript": <SiTypescript className="w-8 h-8 text-blue-600 transform transition-all duration-300 hover:scale-110" />,
+  "Node JS": <SiNodedotjs className="w-8 h-8 text-green-500 transform transition-all duration-300 hover:scale-110" />,
+  "Mongo DB": <SiMongodb className="w-8 h-8 text-green-600 transform transition-all duration-300 hover:scale-110" />,
+  "Python": <SiPython className="w-8 h-8 text-blue-600 transform transition-all duration-300 hover:scale-110" />,
+  "MySQL": <SiMysql className="w-9 h-9 text-blue-700 transform transition-all duration-300 hover:scale-110" />,
+  "C#": <CSharpIcon className="w-9 h-9 text-purple-600 transform transition-all duration-300 hover:scale-110" />,
+  "Django": <SiDjango className="w-8 h-8 text-green-700 transform transition-all duration-300 hover:scale-110" />
 };
 
 export const dataExperience = [
