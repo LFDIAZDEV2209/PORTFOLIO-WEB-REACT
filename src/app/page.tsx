@@ -5,6 +5,7 @@ import Introduction from "@/components/introduction";
 import AboutMe from "@/components/about-me";
 import Experience from "@/components/experience";
 import Services from "@/components/services";
+import Portfolio from "@/components/portfolio";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <AboutMe />
       <Experience />
       <Services />
+      <Portfolio />
     </main>
   );
 }
