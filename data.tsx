@@ -202,60 +202,60 @@ export const dataExperience = [
 export const dataServices = [
     {
         id: 1,
-        title: "Desarrollo Web",
+        title: "Web Development",
         icon: <PanelsTopLeft />,
         features: [
             {
-                name: "Desarrollo de sitios web personalizados",
+                name: "Custom web development",
             },
             {
-                name: "Diseño y desarrollo responsive",
+                name: "Responsive design and development",
             },
             {
-                name: "Optimización SEO",
+                name: "SEO optimization",
             },
             {
-                name: "Desarrollo de aplicaciones web",
+                name: "Web application development",
             },
             {
-                name: "Gestión de contenido",
+                name: "Content management",
             },
             {
-                name: "Comercio electrónico",
+                name: "E-commerce development",
             },
             {
-                name: "Mantenimiento y soporte continuo",
+                name: "Continuous maintenance and support",
             },
         ],
     },
     {
         id: 2,
-        title: "Creación de contenido",
+        title: "Content Creation",
         icon: <BellPlus />,
         features: [
             {
-                name: "Redacción de contenido original y de calidad",
+                name: "Original content writing",
             },
             {
-                name: "Creación de vídeos atractivos y dinámicos",
+                name: "Creation of attractive and dynamic videos",
             },
             {
-                name: "Diseño gráfico para una imagen impactante",
+                name: "Graphic design for an impactful image",
             },
             {
-                name: "Edición profesional de textos y materiales visuales",
+                name: "Professional text editing and visual materials",
             },
             {
-                name: "Estrategias de marketing de contenidos efectivas",
+                name: "Effective content marketing strategies",
             },
             {
-                name: "Producción de podcasts informativos y entretenidos",
+                name: "Production of informative and entertaining podcasts",
             },
             {
-                name: "Generación de infografías claras y visualmente atractivas",
+                name: "Generation of clear and visually attractive infographics",
             },
             {
-                name: "Fotografía profesional para capturar momentos excepcionales",
+                name: "Professional photography to capture exceptional moments",
             },
         ],
     },
@@ -265,22 +265,22 @@ export const dataServices = [
         icon: <Brush />,
         features: [
             {
-                name: "Diseño intuitivo para una experiencia de usuario fluida",
+                name: "Intuitive design for a fluid user experience",
             },
             {
-                name: "Prototipado interactivo para visualizar la interfaz",
+                name: "Interactive prototyping to visualize the interface",
             },
             {
-                name: "Investigación de usuarios para comprender necesidades y expectativas",
+                name: "User research to understand needs and expectations",
             },
             {
-                name: "Optimización de la usabilidad para mejorar la accesibilidad",
+                name: "Optimization of usability to improve accessibility",
             },
             {
-                name: "Pruebas de usabilidad para evaluar la experiencia",
+                name: "Usability testing to evaluate the experience",
             },
             {
-                name: "Diseño responsive para adaptarse a diferentes dispositivos",
+                name: "Responsive design to adapt to different devices",
             },
         ],
     },
