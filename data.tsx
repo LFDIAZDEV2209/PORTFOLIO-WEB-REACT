@@ -289,7 +289,7 @@ export const dataServices = [
 export const dataContact = [
     {
         id: 1,
-        title: "Teléfono",
+        title: "Phone",
         subtitle: "+57 3053924819",
         link: "tel:+573053924819",
         icon: <Phone />,
@@ -297,7 +297,7 @@ export const dataContact = [
     {
         id: 2,
         title: "Github",
-        subtitle: "github.com/LFDIAZDEV2209",
+        subtitle: "LFDIAZDEV2209",
         link: "github.com/LFDIAZDEV2209",
         icon: <Code2 />,
     },

@@ -7,7 +7,7 @@ import Experience from "@/components/experience";
 import Services from "@/components/services";
 import Portfolio from "@/components/portfolio";
 import Testimonials from "@/components/testimonials";
-
+import Contact from "@/components/contact";
 export default function Home() {
   return (
     <main className="pb-40">
@@ -18,6 +18,7 @@ export default function Home() {
       <Services />
       <Portfolio />
       <Testimonials />
+      <Contact />
     </main>
   );
 }
