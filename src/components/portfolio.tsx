@@ -3,30 +3,65 @@ import { dataPortfolio } from "../../data";
 import Title from "./shared/title";
 import Image from "next/image";
 import { buttonVariants } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 const Portfolio = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+
   return (
-    <div className="p-4 md-py-24 max-w-4xl mx-auto" id="portfolio">
+    <div className="p-4 md:px-12 md:py-15 max-w-4xl mx-auto" id="portfolio">
       <Title title="Portfolio" subtitle="My Projects" />
 
-      <div className="grid md:grid-cols-3 gap-14 mt-4">
+      <motion.div 
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="grid md:grid-cols-3 gap-14 mt-12"
+      >
         {dataPortfolio.map((project) => (
-          <div key={project.id}>
-            <h3 className="text-xl mb-4">{project.title}</h3>
+          <motion.div 
+            key={project.id}
+            variants={itemVariants}
+            className="group"
+          >
+            <h3 className="text-xl mb-4 text-primary">{project.title}</h3>
             <Link href={project.urlGithub} target="_blank">
-              <Image 
-                src={project.image} 
-                alt="project image" 
-                width={300} 
-                height={150} 
-                className="rounded-xl w-full hover:scale-105 transition-all duration-300"
-              />
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Image 
+                  src={project.image} 
+                  alt="project image" 
+                  width={300} 
+                  height={150} 
+                  className="rounded-xl w-full shadow-lg shadow-slate-500/10"
+                />
+              </motion.div>
             </Link>
-
-        
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Title from "./shared/title";
 import { Phone } from "lucide-react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const AboutMe = () => {
   const [api, setApi] = useState<any>();
@@ -19,13 +20,39 @@ const AboutMe = () => {
     return () => clearInterval(interval);
   }, [api]);
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+
   return (
     <div className="p-6 md:px-12 md:py-15 max-w-5xl mx-auto" id="about-me">
       <Title title="About Me" subtitle="Get to know me" />
 
-      <div className="grid md:grid-cols-2">
-        <div className="py-12 md:py-0 flex items-center justify-center">
-          {/* Carousel */}
+      <motion.div 
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="grid md:grid-cols-2 gap-12 mt-12"
+      >
+        <motion.div variants={itemVariants} className="py-12 md:py-0 flex items-center justify-center">
           <Carousel
             setApi={setApi}
             opts={{
@@ -44,40 +71,51 @@ const AboutMe = () => {
                       alt="Image" 
                       width={250} 
                       height={400}
-                      className="w-full h-auto rounded-lg"
+                      className="w-full h-auto rounded-xl shadow-lg shadow-slate-500/10 hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            <CarouselPrevious className="right-0" />
+            <CarouselNext className="right-0" />
           </Carousel>
-        </div>
-        <div>
-          <div className="grid md:grid-cols-3 mt-7 gap-4">
+        </motion.div>
+        <motion.div variants={itemVariants}>
+          <motion.div 
+            variants={containerVariants}
+            className="grid md:grid-cols-3 gap-6"
+          >
             {dataAboutMe.map((data) => (
-              <div
+              <motion.div
                 key={data.id}
-                className="border border-white-10 rounded-xl p-4 shadow-md shadow-slate-100 dark:bg-slate-800"
+                variants={itemVariants}
+                className="group dark:bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-slate-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-slate-500/10"
               >
-                {data.icon}
-                <p className="my-2">{data.name}</p>
-                <p className="text-gray-400">{data.description}</p>
-              </div>
+                <div className="text-primary mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {data.icon}
+                </div>
+                <h3 className="text-lg font-semibold mb-2">{data.name}</h3>
+                <p className="text-gray-400 text-sm">{data.description}</p>
+              </motion.div>
             ))}
-          </div>
-          <p className="my-8">
-            Hi, I'm a passionate web developer focused on details, with experience in JavaScript, React, Node.js and Python. I enjoy transforming complex problems into clean, elegant and functional solutions. In recent years, I have worked on various projects, from dynamic web applications to backend APIs. I am always looking for new technologies, ways to improve my skills and contribute to products that generate real impact. I am particularly interested in writing clean code, following good UI/UX practices and building intuitive digital experiences. When I'm not coding, I'm probably exploring new tools, collaborating on open source projects or learning about artificial intelligence and full stack development. I'm ready to create something amazing with you!
-          </p>
-          <div className="flex justify-center mt-4">
-          <Button>
-            <Phone size={20} className="mr-2" />
-            Call me
-            </Button>
-          </div>
-        </div>
-      </div>
+          </motion.div>
+          <motion.div 
+            variants={itemVariants}
+            className="mt-12 dark:bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700/50"
+          >
+            <p className="text-gray-400 dark:text-gray-300 leading-relaxed">
+              Hi, I'm a passionate web developer focused on details, with experience in JavaScript, React, Node.js and Python. I enjoy transforming complex problems into clean, elegant and functional solutions. In recent years, I have worked on various projects, from dynamic web applications to backend APIs. I am always looking for new technologies, ways to improve my skills and contribute to products that generate real impact. I am particularly interested in writing clean code, following good UI/UX practices and building intuitive digital experiences. When I'm not coding, I'm probably exploring new tools, collaborating on open source projects or learning about artificial intelligence and full stack development. I'm ready to create something amazing with you!
+            </p>
+            <div className="flex justify-center mt-8">
+              <Button className="group">
+                <Phone size={20} className="mr-2 group-hover:scale-110 transition-transform duration-300" />
+                Call me
+              </Button>
+            </div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
