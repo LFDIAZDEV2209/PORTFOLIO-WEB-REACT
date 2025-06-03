@@ -313,44 +313,44 @@ export const dataContact = [
 export const dataTestimonials = [
     {
         id: 1,
-        name: "George Snow",
+        name: "Hector",
         description:
-            "¡Increíble plataforma! Los testimonios aquí son genuinos y me han ayudado a tomar decisiones informadas. ¡Altamente recomendado!",
-        imageUrl: "/profile-1.jpeg",
+            "Es una persona con un ingenio formidable capaz de avanzar sobre los retos que se le presenten",
+        imageUrl: "/hector.jpg",
     },
     {
         id: 2,
-        name: "Juan Pérez",
+        name: "Sheyla Samur",
         description:
-            "Me encanta la variedad de testimonios disponibles en esta página. Es inspirador ver cómo otras personas han superado desafíos similares a los míos. ¡Gracias por esta invaluable fuente de motivación!",
-        imageUrl: "/profile-2.jpeg",
+            "En espera de testimonio",
+        imageUrl: "/sheyla.jpg",
     },
     {
         id: 3,
-        name: "María García",
+        name: "Jholver Pardo",
         description:
-            "Excelente recurso para obtener opiniones auténticas sobre diferentes productos y servicios. Me ha ayudado mucho en mis compras en línea. ¡Bravo por este sitio!",
-        imageUrl: "/profile-3.jpeg",
+            "En espera de testimonio",
+        imageUrl: "/jholver.jpg",
     },
     {
         id: 4,
-        name: "Laura Snow",
+        name: "Juan Contreras",
         description:
-            "¡Qué descubrimiento tan fantástico! Los testimonios aquí son honestos y detallados. Me siento más seguro al tomar decisiones después de leer las experiencias compartidas por otros usuarios.",
-        imageUrl: "/profile-3.jpeg",
+            "En espera de testimonio",
+        imageUrl: "/juan.jpg",
     },
     {
         id: 5,
-        name: "Carlos Sánchez",
+        name: "Luis Gamboa",
         description:
-            "Una joya en la web. Los testimonios son fáciles de encontrar y están bien organizados. ¡Definitivamente mi destino número uno cuando necesito referencias confiables!",
-        imageUrl: "/profile-2.jpeg",
+            "En espera de testimonio",
+        imageUrl: "/luis.jpg",
     },
     {
         id: 6,
-        name: "Antonio Martínez",
+        name: "Sergio Himayrob",
         description:
-            "¡Fantástico recurso para aquellos que buscan validación antes de tomar decisiones importantes! Los testimonios aquí son veraces y realmente útiles. ¡Gracias por simplificar mi proceso de toma de decisiones!",
-        imageUrl: "/profile-3.jpeg",
+            "En espera de testimonio",
+        imageUrl: "/sergio.jpg",
     },
 ];

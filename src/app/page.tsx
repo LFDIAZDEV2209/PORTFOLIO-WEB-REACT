@@ -10,7 +10,7 @@ import Testimonials from "@/components/testimonials";
 import Contact from "@/components/contact";
 export default function Home() {
   return (
-    <main className="pb-40">
+    <main className="pb-40 z-10">
       <Navbar />
       <Introduction />
       <AboutMe />
