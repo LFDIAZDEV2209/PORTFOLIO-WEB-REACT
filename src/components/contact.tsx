@@ -4,6 +4,7 @@ import Link from "next/link";
 import ContactForm from "./contact-form";
 import { buttonVariants } from "./ui/button";
 import { motion } from "framer-motion";
+import AnimatedAvatar from "./ui/avatar-model";
 
 const Contact = () => {
   const containerVariants = {
@@ -77,6 +78,9 @@ const Contact = () => {
           >
             <ContactForm />
           </motion.div>
+          <div className="flex flex-col items-center justify-center min-h-[300px]">
+            <AnimatedAvatar />
+          </div>
         </motion.div>
       </motion.div>
     </div>
