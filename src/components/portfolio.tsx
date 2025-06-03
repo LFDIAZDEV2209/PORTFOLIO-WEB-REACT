@@ -4,8 +4,11 @@ import Title from "./shared/title";
 import Image from "next/image";
 import { buttonVariants } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/context/LanguageContext";
 
 const Portfolio = () => {
+  const { language } = useLanguage();
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -29,7 +32,10 @@ const Portfolio = () => {
 
   return (
     <div className="p-4 md:px-12 md:py-15 max-w-4xl mx-auto" id="portfolio">
-      <Title title="Portfolio" subtitle="My Projects" />
+      <Title
+        title={language === "es" ? "Portafolio" : "Portfolio"}
+        subtitle={language === "es" ? "Mis Proyectos" : "My Projects"}
+      />
 
       <motion.div 
         variants={containerVariants}
@@ -44,7 +50,9 @@ const Portfolio = () => {
             variants={itemVariants}
             className="group"
           >
-            <h3 className="text-xl mb-4 text-primary">{project.title}</h3>
+            <h3 className="text-xl mb-4 text-primary">
+              {language === "es" && project.title_es ? project.title_es : project.title}
+            </h3>
             <Link href={project.urlGithub} target="_blank">
               <motion.div
                 whileHover={{ scale: 1.05 }}

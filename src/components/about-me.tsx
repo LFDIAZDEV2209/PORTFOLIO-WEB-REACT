@@ -6,10 +6,26 @@ import Title from "./shared/title";
 import { Phone } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/context/LanguageContext";
 
 const AboutMe = () => {
   const [api, setApi] = useState<any>();
-
+  const { language } = useLanguage();
+  const texts = {
+    en: {
+      title: "About Me",
+      subtitle: "Get to know me",
+      description: "Hi, I'm a passionate web developer focused on details, with experience in JavaScript, React, Node.js and Python. I enjoy transforming complex problems into clean, elegant and functional solutions. In recent years, I have worked on various projects, from dynamic web applications to backend APIs. I am always looking for new technologies, ways to improve my skills and contribute to products that generate real impact. I am particularly interested in writing clean code, following good UI/UX practices and building intuitive digital experiences. When I'm not coding, I'm probably exploring new tools, collaborating on open source projects or learning about artificial intelligence and full stack development. I'm ready to create something amazing with you!",
+      call: "Call me"
+    },
+    es: {
+      title: "Sobre mí",
+      subtitle: "Conóceme",
+      description: "Hola, soy un desarrollador web apasionado y detallista, con experiencia en JavaScript, React, Node.js y Python. Disfruto transformar problemas complejos en soluciones limpias, elegantes y funcionales. En los últimos años he trabajado en diversos proyectos, desde aplicaciones web dinámicas hasta APIs backend. Siempre busco nuevas tecnologías, formas de mejorar mis habilidades y contribuir a productos que generen impacto real. Me interesa especialmente escribir código limpio, seguir buenas prácticas de UI/UX y construir experiencias digitales intuitivas. Cuando no estoy programando, probablemente estoy explorando nuevas herramientas, colaborando en proyectos open source o aprendiendo sobre inteligencia artificial y desarrollo full stack. ¡Estoy listo para crear algo increíble contigo!",
+      call: "Llámame"
+    },
+  };
+  
   useEffect(() => {
     if (!api) return;
 
@@ -43,7 +59,7 @@ const AboutMe = () => {
 
   return (
     <div className="p-6 md:px-12 md:py-15 max-w-5xl mx-auto" id="about-me">
-      <Title title="About Me" subtitle="Get to know me" />
+      <Title title={texts[language].title} subtitle={texts[language].subtitle} />
 
       <motion.div 
         variants={containerVariants}
@@ -95,8 +111,8 @@ const AboutMe = () => {
                 <div className="text-primary mb-4 group-hover:scale-110 transition-transform duration-300">
                   {data.icon}
                 </div>
-                <h3 className="text-lg font-semibold mb-2">{data.name}</h3>
-                <p className="text-gray-400 text-sm">{data.description}</p>
+                <h3 className="text-lg font-semibold mb-2">{language === 'es' && (data as any).name_es ? (data as any).name_es : data.name}</h3>
+                <p className="text-gray-400 text-sm">{language === 'es' && (data as any).description_es ? (data as any).description_es : data.description}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -105,12 +121,12 @@ const AboutMe = () => {
             className="mt-12 dark:bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700/50"
           >
             <p className="text-gray-400 dark:text-gray-300 leading-relaxed">
-              Hi, I'm a passionate web developer focused on details, with experience in JavaScript, React, Node.js and Python. I enjoy transforming complex problems into clean, elegant and functional solutions. In recent years, I have worked on various projects, from dynamic web applications to backend APIs. I am always looking for new technologies, ways to improve my skills and contribute to products that generate real impact. I am particularly interested in writing clean code, following good UI/UX practices and building intuitive digital experiences. When I'm not coding, I'm probably exploring new tools, collaborating on open source projects or learning about artificial intelligence and full stack development. I'm ready to create something amazing with you!
+              {texts[language].description}
             </p>
             <div className="flex justify-center mt-8">
               <Button className="group">
                 <Phone size={20} className="mr-2 group-hover:scale-110 transition-transform duration-300" />
-                Call me
+                {texts[language].call}
               </Button>
             </div>
           </motion.div>

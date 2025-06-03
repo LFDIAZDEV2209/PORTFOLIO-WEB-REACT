@@ -92,6 +92,7 @@ export const dataPortfolio = [
     {
         id: 1,
         title: "Management of Liquors",
+        title_es: "Gestión de Licores",
         image: "/licores.png",
         urlGithub: "https://github.com/LFDIAZDEV2209/LICORES_SOFT",
         urlDemo: "#!",
@@ -99,6 +100,7 @@ export const dataPortfolio = [
     {
         id: 2,
         title: "Audio Recorder",
+        title_es: "Grabadora de Audio",
         image: "/grabadora.png",
         urlGithub: "https://github.com/LFDIAZDEV2209/voice-recorder",
         urlDemo: "#!",
@@ -106,6 +108,7 @@ export const dataPortfolio = [
     {
         id: 3,
         title: "eCommerce Website",
+        title_es: "Sitio eCommerce",
         image: "/ecommerce.png",
         urlGithub: "https://github.com/LFDIAZDEV2209/eCommerce-Clothes-WEB",
         urlDemo: "#!",
@@ -113,6 +116,7 @@ export const dataPortfolio = [
     {
         id: 4,
         title: "Heroes Cards",
+        title_es: "Cartas de Héroes",
         image: "/heroes.png",
         urlGithub: "https://github.com/LFDIAZDEV2209/heroes-cards-json",
         urlDemo: "#!",
@@ -120,6 +124,7 @@ export const dataPortfolio = [
     {
         id: 5,
         title: "Arena Fighter",
+        title_es: "Arena Fighter",
         image: "/arena.png",
         urlGithub: "https://github.com/LFDIAZDEV2209/arena-heroes",
         urlDemo: "#!",
@@ -127,6 +132,7 @@ export const dataPortfolio = [
     {
         id: 6,
         title: "LMS Platform",
+        title_es: "Plataforma LMS",
         image: "/lms.png",
         urlGithub: "https://github.com/LFDIAZDEV2209/LMS-PORTAL",
         urlDemo: "#!",
@@ -203,85 +209,69 @@ export const dataServices = [
     {
         id: 1,
         title: "Web Development",
+        title_es: "Desarrollo Web",
         icon: <PanelsTopLeft />,
         features: [
-            {
-                name: "Custom web development",
-            },
-            {
-                name: "Responsive design and development",
-            },
-            {
-                name: "SEO optimization",
-            },
-            {
-                name: "Web application development",
-            },
-            {
-                name: "Content management",
-            },
-            {
-                name: "E-commerce development",
-            },
-            {
-                name: "Continuous maintenance and support",
-            },
+            "Custom web development",
+            "Responsive design and development",
+            "SEO optimization",
+            "Web application development",
+            "Content management",
+            "E-commerce development",
+            "Continuous maintenance and support",
+        ],
+        features_es: [
+            "Desarrollo web a medida",
+            "Diseño y desarrollo responsivo",
+            "Optimización SEO",
+            "Desarrollo de aplicaciones web",
+            "Gestión de contenidos",
+            "Desarrollo de e-commerce",
+            "Mantenimiento y soporte continuo",
         ],
     },
     {
         id: 2,
         title: "Content Creation",
+        title_es: "Creación de Contenido",
         icon: <BellPlus />,
         features: [
-            {
-                name: "Original content writing",
-            },
-            {
-                name: "Creation of attractive and dynamic videos",
-            },
-            {
-                name: "Graphic design for an impactful image",
-            },
-            {
-                name: "Professional text editing and visual materials",
-            },
-            {
-                name: "Effective content marketing strategies",
-            },
-            {
-                name: "Production of informative and entertaining podcasts",
-            },
-            {
-                name: "Generation of clear and visually attractive infographics",
-            },
-            {
-                name: "Professional photography to capture exceptional moments",
-            },
+            "Content creation",
+            "Social media management",
+            "SEO optimization",
+            "Content marketing",
+            "Copywriting",
+            "Graphic design",
+        ],
+        features_es: [
+            "Creación de contenido",
+            "Gestión de redes sociales",
+            "Optimización SEO",
+            "Marketing de contenido",
+            "Copywriting",
+            "Diseño gráfico",
         ],
     },
     {
         id: 3,
         title: "UI/UX Design",
+        title_es: "Diseño UI/UX",
         icon: <Brush />,
         features: [
-            {
-                name: "Intuitive design for a fluid user experience",
-            },
-            {
-                name: "Interactive prototyping to visualize the interface",
-            },
-            {
-                name: "User research to understand needs and expectations",
-            },
-            {
-                name: "Optimization of usability to improve accessibility",
-            },
-            {
-                name: "Usability testing to evaluate the experience",
-            },
-            {
-                name: "Responsive design to adapt to different devices",
-            },
+            "Intuitive design for a fluid user experience",
+            "Interactive prototyping to visualize the interface",
+            "User research to understand needs and expectations",
+            "Optimization of usability to improve accessibility",
+            "Usability testing to evaluate the experience",
+            "Responsive design to adapt to different devices",
+        ],
+        features_es: [
+            "Diseño intuitivo para una experiencia de usuario fluida",
+            "Prototipado interactivo para visualizar la interfaz",
+            "Investigación de usuario para entender necesidades y expectativas",
+            "Optimización de usabilidad para mejorar la accesibilidad",
+            "Pruebas de usabilidad para evaluar la experiencia",
+            "Diseño responsivo para adaptarse a diferentes dispositivos",
         ],
     },
 ];
@@ -290,21 +280,27 @@ export const dataContact = [
     {
         id: 1,
         title: "Phone",
+        title_es: "Teléfono",
         subtitle: "+57 3053924819",
+        subtitle_es: "+57 3053924819",
         link: "tel:+573053924819",
         icon: <Phone />,
     },
     {
         id: 2,
         title: "Github",
+        title_es: "Github",
         subtitle: "LFDIAZDEV2209",
+        subtitle_es: "LFDIAZDEV2209",
         link: "github.com/LFDIAZDEV2209",
         icon: <Code2 />,
     },
     {
         id: 3,
         title: "Email",
+        title_es: "Correo",
         subtitle: "diazf7583@gmail.com",
+        subtitle_es: "diazf7583@gmail.com",
         link: "mailto:diazf7583@gmail.com",
         icon: <Inbox />,
     },
@@ -314,43 +310,64 @@ export const dataTestimonials = [
     {
         id: 1,
         name: "Hector",
-        description:
-            "Es una persona con un ingenio formidable capaz de avanzar sobre los retos que se le presenten",
+        name_es: "Héctor",
+        description: "He is a person with formidable ingenuity, capable of overcoming any challenge.",
+        description_es: "Es una persona con un ingenio formidable capaz de avanzar sobre los retos que se le presenten.",
         imageUrl: "/hector.jpg",
     },
     {
         id: 2,
         name: "Sheyla Samur",
-        description:
-            "En espera de testimonio",
+        name_es: "Sheyla Samur",
+        description: "Awaiting testimonial",
+        description_es: "En espera de testimonio",
         imageUrl: "/sheyla.jpg",
     },
     {
         id: 3,
         name: "Jholver Pardo",
-        description:
-            "En espera de testimonio",
+        name_es: "Jholver Pardo",
+        description: "Awaiting testimonial",
+        description_es: "En espera de testimonio",
         imageUrl: "/jholver.jpg",
     },
     {
         id: 4,
         name: "Juan Contreras",
-        description:
-            "En espera de testimonio",
+        name_es: "Juan Contreras",
+        description: "Awaiting testimonial",
+        description_es: "En espera de testimonio",
         imageUrl: "/juan.jpg",
     },
     {
         id: 5,
         name: "Luis Gamboa",
-        description:
-            "En espera de testimonio",
+        name_es: "Luis Gamboa",
+        description: "Awaiting testimonial",
+        description_es: "En espera de testimonio",
         imageUrl: "/luis.jpg",
     },
     {
         id: 6,
         name: "Sergio Himayrob",
-        description:
-            "En espera de testimonio",
+        name_es: "Sergio Himayrob",
+        description: "Awaiting testimonial",
+        description_es: "En espera de testimonio",
         imageUrl: "/sergio.jpg",
     },
 ];
+
+export const introductionTexts = {
+  en: {
+    hello: "Hello, I'm",
+    role: "FullStack Developer",
+    contact: "Contact Me",
+    download: "Download CV",
+  },
+  es: {
+    hello: "Hola, soy",
+    role: "Desarrollador FullStack",
+    contact: "Contáctame",
+    download: "Descargar CV",
+  },
+};

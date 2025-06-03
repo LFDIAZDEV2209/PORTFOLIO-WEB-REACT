@@ -13,10 +13,31 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "./ui/button"
 import { useState } from "react"
+import { useLanguage } from "@/context/LanguageContext"
 
 const ContactForm = () => {
+  const { language } = useLanguage()
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState("")
+
+  const texts = {
+    en: {
+      name: "Name",
+      email: "Email",
+      message: "Message",
+      send: "Send",
+      success: "Email sent successfully",
+      error: "Failed to send email"
+    },
+    es: {
+      name: "Nombre",
+      email: "Correo",
+      message: "Mensaje",
+      send: "Enviar",
+      success: "Correo enviado exitosamente",
+      error: "Error al enviar el correo"
+    }
+  }
 
   const formSchema = z.object({
     username: z.string().min(2).max(50),
@@ -49,7 +70,7 @@ const ContactForm = () => {
     <Form {...form}>
       {success ? (
         <div className="bg-green-500 text-white p-4 rounded-md">
-          Email sent successfully
+          {texts[language].success}
         </div>
       ) : ( 
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8"> 
@@ -60,7 +81,7 @@ const ContactForm = () => {
             <FormItem>
               <FormControl>
                 <Input
-                  placeholder="Name"
+                  placeholder={texts[language].name}
                   {...field}
                   className="dark:bg-slate-800"
                 />
@@ -75,7 +96,7 @@ const ContactForm = () => {
             <FormItem>
               <FormControl>
                 <Input
-                  placeholder="Email"
+                  placeholder={texts[language].email}
                   {...field}
                   className="dark:bg-slate-800"
                 />
@@ -90,7 +111,7 @@ const ContactForm = () => {
             <FormItem>
               <FormControl>
                 <Textarea
-                  placeholder="Message"
+                  placeholder={texts[language].message}
                   {...field}
                   className="dark:bg-slate-800"
                 />
@@ -98,7 +119,7 @@ const ContactForm = () => {
             </FormItem>
           )}
         />
-        <Button type="submit">Send</Button>
+        <Button type="submit">{texts[language].send}</Button>
       </form>
       
       )}

@@ -5,8 +5,11 @@ import ContactForm from "./contact-form";
 import { buttonVariants } from "./ui/button";
 import { motion } from "framer-motion";
 import AnimatedAvatar from "./ui/avatar-model";
+import { useLanguage } from "@/context/LanguageContext";
 
 const Contact = () => {
+  const { language } = useLanguage();
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -30,7 +33,10 @@ const Contact = () => {
 
   return (
     <div className="p-6 md:px-12 md:py-15 max-w-5xl mx-auto" id="contact">
-      <Title title="Contact Me" subtitle="Get in touch with me 👋" />
+      <Title
+        title={language === "es" ? "Contacto" : "Contact Me"}
+        subtitle={language === "es" ? "Ponte en contacto conmigo 👋" : "Get in touch with me 👋"}
+      />
 
       <motion.div 
         variants={containerVariants}
@@ -53,8 +59,12 @@ const Contact = () => {
               >
                 {contact.icon}
               </motion.div>
-              <h3 className="text-lg font-semibold mb-1">{contact.title}</h3>
-              <p className="text-gray-400 text-sm mb-4">{contact.subtitle}</p>
+              <h3 className="text-lg font-semibold mb-1">
+                {language === "es" && contact.title_es ? contact.title_es : contact.title}
+              </h3>
+              <p className="text-gray-400 text-sm mb-4">
+                {language === "es" && contact.subtitle_es ? contact.subtitle_es : contact.subtitle}
+              </p>
               <Link 
                 href={contact.link} 
                 target="_blank" 
@@ -63,7 +73,7 @@ const Contact = () => {
                   className: "w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
                 })}
               >
-                Send a message
+                {language === "es" ? "Enviar mensaje" : "Send a message"}
               </Link>
             </motion.div>
           ))}
