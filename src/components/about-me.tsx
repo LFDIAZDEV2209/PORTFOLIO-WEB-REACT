@@ -7,9 +7,11 @@ import { Phone } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
+import { AboutMeItem } from "@/types";
+import type { UseEmblaCarouselType } from "embla-carousel-react";
 
 const AboutMe = () => {
-  const [api, setApi] = useState<any>();
+  const [api, setApi] = useState<UseEmblaCarouselType[1] | undefined>(undefined);
   const { language } = useLanguage();
   const texts = {
     en: {
@@ -111,8 +113,8 @@ const AboutMe = () => {
                 <div className="text-primary mb-4 group-hover:scale-110 transition-transform duration-300">
                   {data.icon}
                 </div>
-                <h3 className="text-lg font-semibold mb-2">{language === 'es' && (data as any).name_es ? (data as any).name_es : data.name}</h3>
-                <p className="text-gray-400 text-sm">{language === 'es' && (data as any).description_es ? (data as any).description_es : data.description}</p>
+                <h3 className="text-lg font-semibold mb-2">{language === 'es' && (data as AboutMeItem).name_es ? (data as AboutMeItem).name_es : data.name}</h3>
+                <p className="text-gray-400 text-sm">{language === 'es' && (data as AboutMeItem).description_es ? (data as AboutMeItem).description_es : data.description}</p>
               </motion.div>
             ))}
           </motion.div>

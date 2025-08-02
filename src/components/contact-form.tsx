@@ -62,7 +62,7 @@ const ContactForm = () => {
     if (response.ok) {
       setSuccess(true)
     } else {
-      setError("Failed to send email")
+      setError(texts[language].error)
     }
   }
 
@@ -71,6 +71,10 @@ const ContactForm = () => {
       {success ? (
         <div className="bg-green-500 text-white p-4 rounded-md">
           {texts[language].success}
+        </div>
+      ) : error ? (
+        <div className="bg-red-500 text-white p-4 rounded-md">
+          {error}
         </div>
       ) : ( 
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8"> 

@@ -19,10 +19,10 @@ export async function POST(req: Request) {
                 text: "This is a test email"
             })
             return Response.json({ data }, { status: 200 })
-        } catch (error) {
+        } catch {
             return Response.json({ error: "Failed to send email" }, { status: 500 })
         }
-    } catch (error) {
+    } catch {
         return Response.json({ error: "Failed to send email" }, { status: 500 })
     }
 }

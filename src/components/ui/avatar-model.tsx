@@ -1,5 +1,5 @@
 // components/AnimatedAvatar.tsx
-import { Canvas, useFrame } from '@react-three/fiber'
+import { Canvas } from '@react-three/fiber'
 import { OrbitControls, useGLTF, useAnimations } from '@react-three/drei'
 import { useEffect, useRef } from 'react'
 import * as THREE from 'three'

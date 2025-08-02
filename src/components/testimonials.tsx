@@ -4,9 +4,10 @@ import { dataTestimonials } from "../../data";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
+import type { UseEmblaCarouselType } from "embla-carousel-react";
 
 const Testimonials = () => {
-  const [api, setApi] = useState<any>();
+  const [api, setApi] = useState<UseEmblaCarouselType[1] | undefined>(undefined);
   const { language } = useLanguage();
 
   useEffect(() => {

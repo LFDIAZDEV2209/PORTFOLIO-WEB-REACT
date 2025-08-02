@@ -2,6 +2,7 @@ import { dataExperience } from "../../data";
 import Title from "./shared/title";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
+import { ExperienceData } from "@/types";
 
 const Experience = () => {
     const { language } = useLanguage();
@@ -48,7 +49,7 @@ const Experience = () => {
                         className="group dark:bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700/50 hover:border-slate-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-slate-500/10"
                     >
                         <h3 className="text-2xl font-bold mb-8 text-primary">
-                            {language === "es" && (data as any).title_es ? (data as any).title_es : data.title}
+                            {language === "es" && (data as ExperienceData).title_es ? (data as ExperienceData).title_es : data.title}
                         </h3>
                         <motion.div 
                             variants={containerVariants}

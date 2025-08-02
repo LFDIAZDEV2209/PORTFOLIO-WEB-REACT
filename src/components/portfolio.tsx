@@ -2,7 +2,7 @@ import Link from "next/link";
 import { dataPortfolio } from "../../data";
 import Title from "./shared/title";
 import Image from "next/image";
-import { buttonVariants } from "@/components/ui/button";
+
 import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
 

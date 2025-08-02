@@ -29,8 +29,30 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Deploy on Netlify
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is configured for deployment on Netlify. Follow these steps:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push your code to GitHub
+2. Connect your repository to Netlify
+3. Set the build command to: `npm run build`
+4. Set the publish directory to: `out`
+5. Add your environment variables in Netlify dashboard:
+   - `RESEND_API_KEY`: Your Resend API key for email functionality
+
+The project will automatically build and deploy when you push changes to your main branch.
+
+## Environment Variables
+
+Create a `.env.local` file in the root directory with:
+
+```
+RESEND_API_KEY=your_resend_api_key_here
+```
+
+## Build Issues
+
+If you encounter build issues, make sure:
+- Node.js version is 18 or higher
+- All dependencies are properly installed
+- Environment variables are set correctly
