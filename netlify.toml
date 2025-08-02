@@ -4,6 +4,12 @@
 
 [build.environment]
   NODE_VERSION = "18"
+  RESEND_API_KEY = "dummy_key_for_build"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
 
 [[redirects]]
   from = "/*"

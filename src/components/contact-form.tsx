@@ -55,13 +55,20 @@ const ContactForm = () => {
   })
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    const response = await fetch("/api/send", {
-      method: "POST",
-      body: JSON.stringify(values)
-    })
-    if (response.ok) {
-      setSuccess(true)
-    } else {
+    try {
+      const response = await fetch("/.netlify/functions/api/send", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values)
+      })
+      if (response.ok) {
+        setSuccess(true)
+      } else {
+        setError(texts[language].error)
+      }
+    } catch {
       setError(texts[language].error)
     }
   }

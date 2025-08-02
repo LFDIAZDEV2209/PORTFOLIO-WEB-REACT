@@ -40,6 +40,8 @@ This project is configured for deployment on Netlify. Follow these steps:
 5. Add your environment variables in Netlify dashboard:
    - `RESEND_API_KEY`: Your Resend API key for email functionality
 
+The project uses Netlify Functions for the email API to avoid build issues with server-side code.
+
 The project will automatically build and deploy when you push changes to your main branch.
 
 ## Environment Variables
