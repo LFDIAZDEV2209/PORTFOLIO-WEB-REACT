@@ -4,15 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "npm ci && next build",
-    "build:clean": "rm -rf .next out && npm ci && next build",
+    "build": "next build",
+    "build:clean": "rm -rf .next out && npm install && next build",
     "build:analyze": "ANALYZE=true next build",
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "type-check": "tsc --noEmit",
-    "export": "next build && next export",
-    "postinstall": "npm run type-check"
+    "export": "next build && next export"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
