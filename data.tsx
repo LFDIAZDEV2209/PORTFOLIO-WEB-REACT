@@ -18,21 +18,27 @@ import { CSharpIcon } from "@/components/icons/CSharpIcon";
 export const dataAboutMe = [
     {
         id: 1,
-        name: "Experiencia",
+        name: "Experience",
+        name_es: "Experiencia",
         icon: <Briefcase />,
-        description: " 1 year of experience",
+        description: "1 year of experience",
+        description_es: "1 año de experiencia",
     },
     {
         id: 2,
         name: "Social",
+        name_es: "Social",
         icon: <UsersRound />,
         description: "Friendly and eager to learn",
+        description_es: "Amigable y ansioso por aprender",
     },
     {
         id: 3,
-        name: "Proyectos",
+        name: "Projects",
+        name_es: "Proyectos",
         icon: <Wrench />,
         description: "50+ projects completed",
+        description_es: "50+ proyectos completados",
     },
 ];
 

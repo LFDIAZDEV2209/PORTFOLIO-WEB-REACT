@@ -1,16 +1,24 @@
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import { dataAboutMe, dataSlider } from "../../data";
-import { useEffect, useState } from "react";
+import { useEffect, useState, memo } from "react";
 import Title from "./shared/title";
 import { Phone } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
-import { AboutMeItem } from "@/types";
 import type { UseEmblaCarouselType } from "embla-carousel-react";
 
-const AboutMe = () => {
+interface AboutMeData {
+  id: number;
+  name: string;
+  name_es?: string;
+  icon: React.ReactNode;
+  description: string;
+  description_es?: string;
+}
+
+const AboutMe = memo(() => {
   const [api, setApi] = useState<UseEmblaCarouselType[1] | undefined>(undefined);
   const { language } = useLanguage();
   const texts = {
@@ -88,9 +96,12 @@ const AboutMe = () => {
                   <div className="flex items-center justify-center">
                     <Image 
                       src={data.url} 
-                      alt="Image" 
+                      alt="Personal photo" 
                       width={280} 
                       height={350}
+                      loading="lazy"
+                      placeholder="blur"
+                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
                       className="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-xl shadow-lg shadow-slate-500/10 hover:scale-105 transition-transform duration-300"
                     />
                   </div>
@@ -107,7 +118,7 @@ const AboutMe = () => {
             variants={containerVariants}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6"
           >
-            {dataAboutMe.map((data) => (
+            {dataAboutMe.map((data: AboutMeData) => (
               <motion.div
                 key={data.id}
                 variants={itemVariants}
@@ -117,10 +128,10 @@ const AboutMe = () => {
                   {data.icon}
                 </div>
                 <h3 className="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 leading-tight">
-                  {language === 'es' && (data as any).name_es ? (data as any).name_es : data.name}
+                  {language === 'es' && data.name_es ? data.name_es : data.name}
                 </h3>
                 <p className="text-gray-400 text-xs sm:text-sm leading-relaxed flex-grow">
-                  {language === 'es' && (data as any).description_es ? (data as any).description_es : data.description}
+                  {language === 'es' && data.description_es ? data.description_es : data.description}
                 </p>
               </motion.div>
             ))}
@@ -143,6 +154,8 @@ const AboutMe = () => {
       </motion.div>
     </div>
   );
-};
+});
+
+AboutMe.displayName = 'AboutMe';
 
 export default AboutMe;
