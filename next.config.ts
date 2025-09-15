@@ -10,11 +10,14 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   generateEtags: false,
   experimental: {
-    optimizeCss: true,
+    optimizeCss: false, // Disabled for static export compatibility
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
+  // Disable features that don't work with static export
+  swcMinify: true,
+  reactStrictMode: true,
 };
 
 export default nextConfig;
