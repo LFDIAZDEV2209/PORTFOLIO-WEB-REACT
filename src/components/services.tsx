@@ -29,7 +29,7 @@ const Services = () => {
   };
 
   return (
-    <div className="p-6 md:px-12 md:py-15 max-w-5xl mx-auto" id="services">
+    <div className="p-4 sm:p-6 md:px-12 md:py-15 max-w-5xl mx-auto" id="services">
       <Title
         title={language === "es" ? "Servicios" : "Services"}
         subtitle={language === "es" ? "Lo que ofrezco" : "What I Offer"}
@@ -39,25 +39,25 @@ const Services = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="grid md:grid-cols-3 gap-8 mt-12"
+        className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 mt-8 lg:mt-12"
       >
         {dataServices.map((service) => (
           <motion.div 
             key={service.id}
             variants={itemVariants}
-            className="group dark:bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700/50 hover:border-slate-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-slate-500/10"
+            className="group dark:bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 lg:p-8 border border-slate-700/50 hover:border-slate-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-slate-500/10"
           >
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-3 mb-4 lg:mb-6">
               <div className="text-primary group-hover:scale-110 transition-transform duration-300">
                 {service.icon}
               </div>
-              <h4 className="text-xl font-semibold">
+              <h4 className="text-lg lg:text-xl font-semibold">
                 {language === "es" ? service.title_es : service.title}
               </h4>
             </div>
             <motion.ul 
               variants={containerVariants}
-              className="space-y-4"
+              className="space-y-3 lg:space-y-4"
             >
               {(language === "es" ? service.features_es : service.features).map((feature, index) => (
                 <motion.li 
@@ -65,8 +65,8 @@ const Services = () => {
                   variants={itemVariants}
                   className="flex items-start gap-3 group/item"
                 >
-                  <Check size={20} className="text-primary mt-1 group-hover/item:scale-110 transition-transform duration-300" />
-                  <span className="text-gray-400 group-hover/item:text-gray-300 transition-colors duration-300">
+                  <Check size={18} className="text-primary mt-0.5 group-hover/item:scale-110 transition-transform duration-300 flex-shrink-0" />
+                  <span className="text-gray-400 group-hover/item:text-gray-300 transition-colors duration-300 text-sm lg:text-base">
                     {feature}
                   </span>
                 </motion.li>

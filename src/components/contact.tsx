@@ -32,7 +32,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="p-6 md:px-12 md:py-15 max-w-5xl mx-auto" id="contact">
+    <div className="p-4 sm:p-6 md:px-12 md:py-15 max-w-5xl mx-auto" id="contact">
       <Title
         title={language === "es" ? "Contacto" : "Contact Me"}
         subtitle={language === "es" ? "Ponte en contacto conmigo 👋" : "Get in touch with me 👋"}
@@ -43,35 +43,35 @@ const Contact = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="grid grid-cols-1 md:grid-cols-3 md:gap-7 mt-12"
+        className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-7 mt-8 lg:mt-12"
       >
-        <motion.div variants={itemVariants} className="space-y-6">
+        <motion.div variants={itemVariants} className="space-y-4 lg:space-y-6 order-2 lg:order-1">
           {dataContact.map((contact) => (
             <motion.div 
               key={contact.id} 
               variants={itemVariants}
-              className="group flex flex-col items-center dark:bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-slate-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-slate-500/10"
+              className="group flex flex-col items-center dark:bg-slate-800/50 backdrop-blur-sm rounded-xl p-4 lg:p-6 border border-slate-700/50 hover:border-slate-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-slate-500/10"
             >
               <motion.div 
-                className="text-primary mb-4 group-hover:scale-110 transition-transform duration-300"
+                className="text-primary mb-3 lg:mb-4 group-hover:scale-110 transition-transform duration-300"
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.5 }}
               >
                 {contact.icon}
               </motion.div>
-              <h3 className="text-lg font-semibold mb-1">
+              <h3 className="text-base lg:text-lg font-semibold mb-1">
                 {language === "es" && contact.title_es ? contact.title_es : contact.title}
               </h3>
-              <p className="text-gray-400 text-sm mb-4">
+              <p className="text-gray-400 text-xs lg:text-sm mb-3 lg:mb-4 text-center">
                 {language === "es" && contact.subtitle_es ? contact.subtitle_es : contact.subtitle}
               </p>
               <Link 
                 href={contact.link} 
                 target="_blank" 
-                className={buttonVariants({ 
+                className={`${buttonVariants({ 
                   variant: "outline",
                   className: "w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
-                })}
+                })} text-xs lg:text-sm`}
               >
                 {language === "es" ? "Enviar mensaje" : "Send a message"}
               </Link>
@@ -80,15 +80,15 @@ const Contact = () => {
         </motion.div>
         <motion.div 
           variants={itemVariants}
-          className="col-span-2"
+          className="lg:col-span-2 order-1 lg:order-2"
         >
           <motion.div 
             variants={itemVariants}
-            className="dark:bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700/50"
+            className="dark:bg-slate-800/50 backdrop-blur-sm rounded-xl p-4 lg:p-8 border border-slate-700/50"
           >
             <ContactForm />
           </motion.div>
-          <div className="flex flex-col items-center justify-center min-h-[300px]">
+          <div className="flex flex-col items-center justify-center min-h-[200px] lg:min-h-[300px] mt-4 lg:mt-0">
             <AnimatedAvatar />
           </div>
         </motion.div>

@@ -25,17 +25,26 @@ export const Meteors = ({
   const [meteorStyles, setMeteorStyles] = useState<Array<React.CSSProperties>>([]);
 
   useEffect(() => {
-    const styles = [...new Array(number)].map(() => ({
-      "--angle": -angle + "deg",
-      top: "-5%",
-      left: `calc(0% + ${Math.floor(Math.random() * window.innerWidth)}px)`,
-      animationDelay: Math.random() * (maxDelay - minDelay) + minDelay + "s",
-      animationDuration:
-        Math.floor(Math.random() * (maxDuration - minDuration) + minDuration) +
-        "s",
-      zIndex: 0,
-    }));
-    setMeteorStyles(styles);
+    const updateMeteors = () => {
+      const styles = [...new Array(number)].map(() => ({
+        "--angle": -angle + "deg",
+        top: "-5%",
+        left: `calc(0% + ${Math.floor(Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1200))}px)`,
+        animationDelay: Math.random() * (maxDelay - minDelay) + minDelay + "s",
+        animationDuration:
+          Math.floor(Math.random() * (maxDuration - minDuration) + minDuration) +
+          "s",
+        zIndex: 0,
+      }));
+      setMeteorStyles(styles);
+    };
+
+    updateMeteors();
+    
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', updateMeteors);
+      return () => window.removeEventListener('resize', updateMeteors);
+    }
   }, [number, minDelay, maxDelay, minDuration, maxDuration, angle]);
 
   return (

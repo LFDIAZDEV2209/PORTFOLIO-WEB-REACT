@@ -76,15 +76,15 @@ const ContactForm = () => {
   return (
     <Form {...form}>
       {success ? (
-        <div className="bg-green-500 text-white p-4 rounded-md">
+        <div className="bg-green-500 text-white p-3 sm:p-4 rounded-md text-sm sm:text-base">
           {texts[language].success}
         </div>
       ) : error ? (
-        <div className="bg-red-500 text-white p-4 rounded-md">
+        <div className="bg-red-500 text-white p-3 sm:p-4 rounded-md text-sm sm:text-base">
           {error}
         </div>
       ) : ( 
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8"> 
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6 lg:space-y-8"> 
         <FormField
           control={form.control}
           name="username"
@@ -94,7 +94,7 @@ const ContactForm = () => {
                 <Input
                   placeholder={texts[language].name}
                   {...field}
-                  className="dark:bg-slate-800"
+                  className="dark:bg-slate-800 text-sm sm:text-base h-10 sm:h-12"
                 />
               </FormControl>
             </FormItem>
@@ -109,7 +109,7 @@ const ContactForm = () => {
                 <Input
                   placeholder={texts[language].email}
                   {...field}
-                  className="dark:bg-slate-800"
+                  className="dark:bg-slate-800 text-sm sm:text-base h-10 sm:h-12"
                 />
               </FormControl>
             </FormItem>
@@ -124,13 +124,15 @@ const ContactForm = () => {
                 <Textarea
                   placeholder={texts[language].message}
                   {...field}
-                  className="dark:bg-slate-800"
+                  className="dark:bg-slate-800 text-sm sm:text-base min-h-[100px] sm:min-h-[120px]"
                 />
               </FormControl>
             </FormItem>
           )}
         />
-        <Button type="submit">{texts[language].send}</Button>
+        <Button type="submit" className="w-full text-sm sm:text-base h-10 sm:h-12">
+          {texts[language].send}
+        </Button>
       </form>
       
       )}
