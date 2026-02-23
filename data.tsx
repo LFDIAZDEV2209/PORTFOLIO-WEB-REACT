@@ -82,7 +82,7 @@ export const dataSlider = [
     },
     {
         id: 2,
-        url: "/family-2.jpg",
+        url: "/family.jpg",
     },
     {
         id: 3,
@@ -90,7 +90,7 @@ export const dataSlider = [
     },
     {
         id: 4,
-        url: "/my-love.jpg",
+        url: "/me-christmas.jpg",
     },
 ]
 
